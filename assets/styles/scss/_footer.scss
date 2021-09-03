@@ -1,0 +1,93 @@
+.footer {
+  text-align: center;
+  background-color: $darkBlue;
+
+  &__grid {
+    @include for-tablet-landscape-up {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__left {
+    @include for-tablet-landscape-up {
+      text-align: left;
+    }
+  }
+
+  &__right {
+    @include for-tablet-landscape-up {
+      text-align: right;
+    }
+  }
+
+  &__logo {
+    margin-bottom: pxToRem(32) + rem;
+  }
+
+  &__socials {
+    margin-bottom: pxToRem(32) + rem;
+
+    a {
+      &:not(:last-child) {
+        margin-right: pxToRem(16) + rem;
+      }
+    }
+  }
+
+  &__links {
+    margin-bottom: pxToRem(32) + rem;
+
+    @include for-tablet-landscape-up {
+      margin-bottom: 0;
+    }
+
+    ul {
+      padding-left: 0;
+
+      @include for-tablet-landscape-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        text-align: left;
+        margin-bottom: 0;
+      }
+
+      li {
+        list-style-type: none;
+
+        a {
+          display: inline-block;
+          color: $grayishBlue;
+          text-decoration: none;
+          font-size: pxToRem(16) + rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: pxToRem(24) + rem;
+        }
+
+        @include for-tablet-landscape-up {
+          &:not(:last-child) {
+            margin-bottom: pxToRem(12) + rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__cta {
+    display: inline-block;
+    margin-bottom: pxToRem(32) + rem;
+  }
+
+  small {
+    color: $grayishBlue;
+    font-size: pxToRem(16) + rem;
+  }
+}

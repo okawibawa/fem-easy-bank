@@ -1,0 +1,75 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 300;
+  font-size: $fontMedium;
+  background-color: $veryLightGray;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Layout
+.layout {
+  width: 88%;
+  max-width: 1110px;
+  margin: auto;
+}
+
+.pb-5 {
+  padding-bottom: pxToRem(88) + rem;
+}
+
+.p-4 {
+  padding: pxToRem(70) + rem 0;
+}
+
+// Button
+.cta {
+  background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+  padding: pxToRem(16) + rem pxToRem(32) + rem;
+  border-radius: 2rem;
+  font-size: pxToRem(14) + rem;
+  color: $white;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

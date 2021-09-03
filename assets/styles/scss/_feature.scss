@@ -1,0 +1,62 @@
+.feature {
+  background-color: $lightGrayishBlue;
+
+  &__titles {
+    text-align: center;
+    color: $darkBlue;
+    margin-bottom: pxToRem(48) + rem;
+
+    h2 {
+      font-size: pxToRem(32) + rem;
+      width: pxToRem(180) + rem;
+      margin: auto;
+      margin-bottom: pxToRem(36) + rem;
+
+      @include for-tablet-landscape-up {
+        width: 100%;
+        margin-right: auto;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: pxToRem(18) + rem;
+      color: $grayishBlue;
+      line-height: 1.5;
+    }
+
+    @include for-tablet-landscape-up {
+      text-align: left;
+      max-width: 620px;
+    }
+  }
+
+  &__grid {
+    text-align: center;
+
+    @include for-tablet-landscape-up {
+      display: flex;
+      gap: pxToRem(32) + rem;
+      text-align: left;
+    }
+  }
+
+  &__item {
+    margin-bottom: pxToRem(30) + rem;
+
+    @include for-tablet-landscape-up {
+    }
+  }
+
+  &__title {
+    margin: pxToRem(20) + rem auto;
+    font-size: pxToRem(24) + rem;
+    color: $darkBlue;
+  }
+
+  &__description {
+    font-size: pxToRem(18) + rem;
+    color: $grayishBlue;
+    line-height: 1.5;
+  }
+}
